@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+#box{
+    font-family: "Open Sans";
+    background-color: rgb(147, 147, 147);
+    width: 95%;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    height: fit-content;
+    border-radius: 1em;
+    margin: 1em;
+}
+    #box h1{
+        font-size: xx-large;
+        margin: 0;
+    }
+    #box p{
+        font-size: large;
+        margin: 0;
+    }
