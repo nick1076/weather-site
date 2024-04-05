@@ -2,17 +2,56 @@
 <head>
     <title>Weather Site</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        
+        const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=35.2271&lon=80.8431&appid=28854e4187765e76ec9f8a661d761602';
+
+        async function setWeatherInfo(textName, icoName) {
+            var text = document.getElementById(textName);
+            var icon = document.getElementById(icoName);
+            
+            const response = await fetch(apiUrl);
+            document.getElementById("monday").textContent = await response.json();
+        }
+
+        setWeatherInfo("monday", "monday_icon")
+
+    </script>
 </head>
 
 <!DOCTYPE html>
 <html>
     <body>
         <div id="box">
-            <h1>Nick's Weather Website</h1>
+            <h1>Weather in Charlotte</h1>
         </div>
         <div id="box">
-            <h1>Nick's Weather Website</h1>
-            <p>This is a super cool website.</p>
+            <div id="weatherentry" class="child">
+                <div id="monday_icon"></div>
+                <h1>Monday</h1>
+                <p id="monday">Weather</p>
+            </div>
+            <div id="weatherentry" class="child">
+                <div id="tuesday_icon"></div>
+                <h1>Tuesday</h1>
+                <p id="tuesday">Weather</p>
+            </div>
+            <div id="weatherentry" class="child">
+                <div id="wednesday_icon"></div>
+                <a href=""></a>
+                <h1>Wednesday</h1>
+                <p id="wednesday">Weather</p>
+            </div>
+            <div id="weatherentry" class="child">
+                <div id="thursday_icon"></div>
+                <h1>Thursday</h1>
+                <p id="thursday">Weather</p>
+            </div>
+            <div id="weatherentry" class="child">
+                <div id="friday_icon"></div>
+                <h1>Friday</h1>
+                <p id="friday">Weather</p>
+            </div>
         </div>
     </body>
 </html>
